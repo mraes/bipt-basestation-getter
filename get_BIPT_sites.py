@@ -4,6 +4,8 @@ import numpy as np
 import geopandas as gpd
 from ca_parser import parse_conformiteitsattest
 import pdb
+from tqdm import tqdm
+from multiprocessing import Pool
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +28,7 @@ def get_bipt_sites_from_json (json):
     # returns a GeoDataFrame with all BIPT sites specified in the json
     df = pd.read_json(json)
     df = df.dropna(axis='columns', how='all') # clean up the data, remove all-empty columns
-    print(f"JSON contains {len(df.index)} sites")
+    print(f"BIPT JSON contains {len(df.index)} sites")
 
     df = df[df["Status"] == "O"] # only take Operational sites (Status = O)
     print(f"After removing non-operational sites, there are {len(df.index)} sites.")
@@ -45,63 +47,73 @@ def get_features_for_sites(sites, features):
     # returns a list with all selected features
     sites_list = []
     for index, row in sites.iterrows():
-        print(f"Site {index} | BIPT id {row.ID} | {row.geometry}")
-        print("Closest WFS features:")
-        search_range = 50 # radius in which we will look for WFS features around BIPT site locations
+        print(f"\nSearching for Site {index} | BIPT id {row.ID} | {row.geometry}")
+        #print("Closest WFS features:")
+        search_range = 55 # radius in which we will look for WFS features around BIPT site locations
         closest_wfs = features[features.distance(row.geometry) < search_range].sort_values(by="goedkeuringsdatum", ascending=False)
         if(closest_wfs.empty):
-            raise Exception(f"No WFS features close to {row.geometry} | BIPT id {row.ID}")
-        print(closest_wfs.sort_values(by="goedkeuringsdatum", ascending=False))
+            print("NO WFS FEATURES FOUND! There are no conformiteitsattesten for this site.")
+            continue
+            #raise Exception(f"No WFS features close to {row.geometry} | BIPT id {row.ID}")
         print("Selecting:")
         closest_wfs_selected = closest_wfs.iloc[0].copy()
         closest_wfs_selected["BIPTid"] = row.ID
         print(closest_wfs_selected)
         sites_list.append(closest_wfs_selected)
     
+    print(f"\n[GET_FEATURES_FOR_SITES] Returning {len(sites_list)} features for {len(sites)} BIPT sites.")
+    #print(sites_list)
     return sites_list
     
-def get_attest_for_site(site, directory):
+def get_attest_for_site(site, directory: str):
     if(site.conformiteitsattest):
-        print(f"Getting conformiteitsattest for dossier: {site.dossiernummer}")
-        if not os.path.exists(directory):
-            os.mkdir(directory)
+        #print(f"Getting conformiteitsattest for dossier: {site.dossiernummer}")
+        os.makedirs(directory, exist_ok=True)
 
         path = f'{directory}/{site.dossiernummer}.pdf'
         if not os.path.exists(path):
-            print(f"Downloading: {site.conformiteitsattest}")
+            #print(f"Downloading: {site.conformiteitsattest}")
             r = requests.get(site.conformiteitsattest, allow_redirects=True)
             with open(path, 'wb') as f:
                f.write(r.content)
             fromcache = False
         else:
-            print("Conformiteitsattest already in cache, skipping.")
+            #print("Conformiteitsattest already in cache, skipping.")
             fromcache = True
         return path, fromcache
     else:
         raise Exception("Site does not have conformiteitsattest URL")
 
 def download_attesten_for_features(features, directory):
-    print("Downloading all conformiteitsattesten to ./{directory}")
-    for index, site in enumerate(features):
-        print(f"[{index+1}/{len(features)}] Getting attest.")
+    print(f"Downloading all conformiteitsattesten to ./{directory} \n")
+    pbar = tqdm(features, desc="Downloading")
+    for index, site in enumerate(pbar):
+        pbar.write(f"Downloading: {site.conformiteitsattest}")
         filename, fromcache = get_attest_for_site(site, directory)
         site["attest"] = filename
         if not fromcache: #to avoid getting blocked by the server
             time.sleep(1)
+    pbar.close()
 
 def parse_attesten_for_features(features):
     # TODO: PARALLEL PROCESSING TO SPEED THIS UP
-    print(f"Parsing conformiteitsattesten...")
-    for index, site in enumerate(tnt_sites):
-        print(f"[{index+1}/{len(tnt_sites)}] Parsing {site.attest}")
+    attest_list = []
+    for f in features:
+        attest_list.append(f.attest)
+    print(f"Parsing {len(attest_list)} conformiteitsattesten...")
+
+    pdb.set_trace()
+    pbar = tqdm(features, desc="Parsing")
+    for index, site in enumerate(pbar):
+        pbar.write(f"Parsing {site.attest}")
         jsonpath = f"{site.attest}.json"
         if(os.path.exists(jsonpath)):
-            print(f"Was already parsed to {jsonpath}, skipping.")
+            pbar.write(f"Was already parsed to {jsonpath}, skipping.")
         else:
             df = parse_conformiteitsattest(site.attest)
-            print(df)
+            pbar.write(df.to_string())
             df.to_json(jsonpath, orient="records")
-            print(f"Saving to {jsonpath}")
+            pbar.write(f"Saving to {jsonpath}")
 
 
 if __name__ == "__main__":
@@ -111,7 +123,7 @@ if __name__ == "__main__":
 
 
     # creating a geodataframe in Lambert 72
-    sites = get_bipt_sites_from_json("bipt.json")
+    sites = get_bipt_sites_from_json("data/bipt.json")
 
     # extracting the sites per operator (some are co-loc sites so pxs + tnt + org > total sites in most cases)
     pxs = sites[sites["Proximus"]==True] # all proximus sites
@@ -125,12 +137,18 @@ if __name__ == "__main__":
         org.to_file("sites_org.geojson", driver='GeoJSON')
 
     #wfs_tnt = gpd.read_file("wfs_tnt.geojson") # Extracted from QGIS
-    wfs_pxs = gpd.read_file("wfs_pxs.geojson") # Extracted from QGIS
+    #tnt_sites = get_features_for_sites(tnt, wfs_tnt)
+    #download_attesten_for_features(tnt_sites, "data/attesten_tnt")
+    #parse_attesten_for_features(tnt_sites)
+
+    wfs_pxs = gpd.read_file("data/wfs_pxs.geojson") # Extracted from QGIS
+    pxs_sites = get_features_for_sites(pxs, wfs_pxs)
+    download_attesten_for_features(pxs_sites, "test/attesten_pxs")
+    parse_attesten_for_features(pxs_sites)
+
     #wfs_org = gpd.read_file("wfs_org.geojson") # Extracted from QGIS
 
-    #tnt_sites = get_features_for_sites(tnt, wfs_tnt)
-    pxs_sites = get_features_for_sites(pxs, wfs_pxs)
-    #download_attesten_for_features(tnt_sites, "attesten_tnt")
+    #download_attesten_for_features(tnt_sites, "data/attesten_tnt")
     #parse_attesten_for_features(tnt_sites)
     #print("All attests parsed")
         

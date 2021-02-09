@@ -37,7 +37,7 @@ def format_dataframe(df):
             df = df.drop(columns=[0,8]) # drop the "Nr" column and the "Tilt" column, we get that from MTilt & Etilt
             df.columns = columns
             number_columns = ['Azimuth', 'Height', 'Width', 'Frequency', 'AGL', 'Power', 'MTilt', 'HAperture', 'VAperture', 'Gain']
-            df[number_columns] = df[number_columns].apply(pd.to_numeric)
+            df[number_columns] = df[number_columns].apply(pd.to_numeric, errors='coerce')
             # filter out 900 MHz (3G) & 2100 MHz (3G)
             df = df[abs(df.Frequency - 900) > 50]
             df = df[abs(df.Frequency - 2100) > 100]
