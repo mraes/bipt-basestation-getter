@@ -6,6 +6,7 @@ from ca_parser import parse_conformiteitsattest
 import pdb
 from tqdm.contrib.concurrent import process_map  # or thread_map
 from tqdm import tqdm
+from functools import partial
 
 logger = logging.getLogger(__name__)
 
@@ -55,10 +56,9 @@ def get_features_for_sites(sites, features):
             print("NO WFS FEATURES FOUND! There are no conformiteitsattesten for this site.")
             continue
             #raise Exception(f"No WFS features close to {row.geometry} | BIPT id {row.ID}")
-        print("Selecting:")
         closest_wfs_selected = closest_wfs.iloc[0].copy()
         closest_wfs_selected["BIPTid"] = row.ID
-        print(closest_wfs_selected)
+        print(f"Selected {closest_wfs_selected.id}")
         sites_list.append(closest_wfs_selected)
     
     print(f"\n[GET_FEATURES_FOR_SITES] Returning {len(sites_list)} features for {len(sites)} BIPT sites.")
@@ -84,16 +84,19 @@ def get_attest_for_site(site, directory: str):
     else:
         raise Exception("Site does not have conformiteitsattest URL")
 
+def _download_attest(site, directory):
+    filename, fromcache = get_attest_for_site(site, directory)
+    fromcache_str = "[CACHE]" if fromcache else ""
+    #tqdm.write(f"Download: {site.conformiteitsattest} -> {filename} {fromcache_str}")
+    return filename
+
 def download_attesten_for_features(features, directory):
-    print(f"Downloading all conformiteitsattesten to ./{directory} \n")
-    pbar = tqdm(features, desc="Downloading")
-    for index, site in enumerate(pbar):
-        pbar.write(f"Downloading: {site.conformiteitsattest}")
-        filename, fromcache = get_attest_for_site(site, directory)
-        site["attest"] = filename
-        if not fromcache: #to avoid getting blocked by the server
-            time.sleep(1)
-    pbar.close()
+    print(f"Downloading {len(features)} conformiteitsattesten to ./{directory} \n")
+    list_of_files = process_map(partial(_download_attest, directory=directory), features, max_workers=os.cpu_count(), desc="Downloading")
+    for index, f in enumerate(features):
+        f["attest"] = list_of_files[index]
+    return features
+
 
 def _parse_attest(pdfpath):
     #tqdm.write(f"Parsing {pdfpath}")
@@ -160,18 +163,32 @@ if __name__ == "__main__":
     #download_attesten_for_features(tnt_sites, "data/attesten_tnt")
     #parse_attesten_for_features(tnt_sites)
 
+    print("PROXIMUS")
+    print("---------------------------------------------------------------")
     wfs_pxs = gpd.read_file("data/wfs_pxs.geojson") # Extracted from QGIS
+    # TODO: filter wfs_pxs with bounding box under investigation (possible in geopandas!)
     pxs_sites = get_features_for_sites(pxs, wfs_pxs)
     download_attesten_for_features(pxs_sites, "test/attesten_pxs")
     parsed_attesten = parse_attesten_for_features(pxs_sites)
-    sites_sector_list = get_sites_sectors_list(pxs_sites, parsed_attesten)
+    sites_sector_list = get_sites_sectors_list(pxs_sites, parsed_attesten) # currently filters out non-L8 bands
     with open('sites_with_sectors_pxs.json', 'w') as outfile:
         json.dump(sites_sector_list, outfile, indent=4)
+    print("----------------------------------------------------------------")
+
+    print("TELENET")
+    print("---------------------------------------------------------------")
+    wfs_tnt = gpd.read_file("data/wfs_tnt.geojson") # Extracted from QGIS
+    # TODO: filter wfs_tnt with bounding box under investigation (possible in geopandas!)
+    tnt_sites = get_features_for_sites(tnt, wfs_tnt)
+    tnt_sites = download_attesten_for_features(tnt_sites, "test/attesten_tnt")
+    parsed_attesten = parse_attesten_for_features(tnt_sites)
+    sites_sector_list = get_sites_sectors_list(tnt_sites, parsed_attesten) # currently filters out non-L8 bands
+    with open('sites_with_sectors_tnt.json', 'w') as outfile:
+        json.dump(sites_sector_list, outfile, indent=4)
+
+    # TODO: GENERATE GEOJSON OF ACTUAL SITES (that are in the sites_sector_list)
+    # To make maps of the simulated sites
 
 
     #wfs_org = gpd.read_file("wfs_org.geojson") # Extracted from QGIS
-
-    #download_attesten_for_features(tnt_sites, "data/attesten_tnt")
-    #parse_attesten_for_features(tnt_sites)
-    #print("All attests parsed")
         
