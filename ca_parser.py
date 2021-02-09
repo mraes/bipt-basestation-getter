@@ -30,6 +30,7 @@ def format_dataframe(df):
         df = df[abs(df.Frequency - 900) > 50]
         df = df[abs(df.Frequency - 2100) > 100]
 
+
         #TODO: FILTER OUT NON-4G freqs
     elif len(df.columns) == 14: # Third (even older) type of attest
         if df.iloc[0,0] == "Zendantennes": #double check

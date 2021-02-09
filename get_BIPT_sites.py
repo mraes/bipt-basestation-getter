@@ -1,4 +1,4 @@
-import requests, os, time, logging
+import requests, os, time, logging, json
 import pandas as pd
 import numpy as np
 import geopandas as gpd
@@ -109,13 +109,31 @@ def _parse_attest(pdfpath):
     return df
 
 def parse_attesten_for_features(features):
-    # TODO: PARALLEL PROCESSING TO SPEED THIS UP
     attest_list = []
     for f in features:
         attest_list.append(f.attest)
     print(f"Parsing {len(attest_list)} conformiteitsattesten...")
     parsed_sites = process_map(_parse_attest, attest_list, max_workers=os.cpu_count(), desc="Parsing")
     return parsed_sites
+
+def get_sites_sectors_list(sites, attesten):
+    r = []
+    #bipt_ids = [site["BIPTid"] for site in sites]
+    for index, site in enumerate(sites):
+        sectors = attesten[index]
+
+        # FOR TESTING, LET'S DROP ALL NON-800Mhz
+        if (not sectors.empty):
+            sectors = sectors[abs(sectors.Frequency - 800) < 50]
+
+        if (sectors.empty): # no LTE sectors
+            #print(f"BIPT site {site.BIPTid} has no sectors after filtering {site.attest}")
+            continue
+        else:
+            sectors = sectors.drop(columns="Antenna").to_dict('records')
+            site_dict = {'bipt_id': site.BIPTid, 'location': {'x' : site.geometry.x, 'y': site.geometry.y}, 'sectors' : sectors}
+            r.append(site_dict)
+    return r
 
 if __name__ == "__main__":
     # get BIPT sites between bounding box coordinates
@@ -146,6 +164,10 @@ if __name__ == "__main__":
     pxs_sites = get_features_for_sites(pxs, wfs_pxs)
     download_attesten_for_features(pxs_sites, "test/attesten_pxs")
     parsed_attesten = parse_attesten_for_features(pxs_sites)
+    sites_sector_list = get_sites_sectors_list(pxs_sites, parsed_attesten)
+    with open('sites_with_sectors_pxs.json', 'w') as outfile:
+        json.dump(sites_sector_list, outfile, indent=4)
+
 
     #wfs_org = gpd.read_file("wfs_org.geojson") # Extracted from QGIS
 
