@@ -4,8 +4,8 @@ import numpy as np
 import geopandas as gpd
 from ca_parser import parse_conformiteitsattest
 import pdb
+from tqdm.contrib.concurrent import process_map  # or thread_map
 from tqdm import tqdm
-from multiprocessing import Pool
 
 logger = logging.getLogger(__name__)
 
@@ -95,26 +95,27 @@ def download_attesten_for_features(features, directory):
             time.sleep(1)
     pbar.close()
 
+def _parse_attest(pdfpath):
+    #tqdm.write(f"Parsing {pdfpath}")
+    jsonpath = f"{pdfpath}.json"
+    if(os.path.exists(jsonpath)):
+            #tqdm.write(f"Was already parsed to {jsonpath}, loading from cache.")
+            df = pd.read_json(jsonpath)
+    else:
+        df = parse_conformiteitsattest(pdfpath)
+        #tqdm.write(df.to_string())
+        df.to_json(jsonpath, orient="records")
+        #tqdm.write(f"Saved to {jsonpath}") 
+    return df
+
 def parse_attesten_for_features(features):
     # TODO: PARALLEL PROCESSING TO SPEED THIS UP
     attest_list = []
     for f in features:
         attest_list.append(f.attest)
     print(f"Parsing {len(attest_list)} conformiteitsattesten...")
-
-    pdb.set_trace()
-    pbar = tqdm(features, desc="Parsing")
-    for index, site in enumerate(pbar):
-        pbar.write(f"Parsing {site.attest}")
-        jsonpath = f"{site.attest}.json"
-        if(os.path.exists(jsonpath)):
-            pbar.write(f"Was already parsed to {jsonpath}, skipping.")
-        else:
-            df = parse_conformiteitsattest(site.attest)
-            pbar.write(df.to_string())
-            df.to_json(jsonpath, orient="records")
-            pbar.write(f"Saving to {jsonpath}")
-
+    parsed_sites = process_map(_parse_attest, attest_list, max_workers=os.cpu_count(), desc="Parsing")
+    return parsed_sites
 
 if __name__ == "__main__":
     # get BIPT sites between bounding box coordinates
@@ -144,7 +145,7 @@ if __name__ == "__main__":
     wfs_pxs = gpd.read_file("data/wfs_pxs.geojson") # Extracted from QGIS
     pxs_sites = get_features_for_sites(pxs, wfs_pxs)
     download_attesten_for_features(pxs_sites, "test/attesten_pxs")
-    parse_attesten_for_features(pxs_sites)
+    parsed_attesten = parse_attesten_for_features(pxs_sites)
 
     #wfs_org = gpd.read_file("wfs_org.geojson") # Extracted from QGIS
 
