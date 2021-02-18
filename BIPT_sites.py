@@ -7,40 +7,51 @@ import pdb
 from tqdm.contrib.concurrent import process_map  # or thread_map
 from tqdm import tqdm
 from functools import partial
+from pyproj import Proj, transform
 
 logger = logging.getLogger(__name__)
 
-def get_bipt_sites_json(bbTL, bbTR, bbBL, bbBR): #top left, top right, bottom left, bottom right
+def get_bipt_sites_json(latfrom, latto, longfrom, longto):
 
-    latfrom = bbTL
-    latto = bbTR
-    longfrom = bbBL
-    longto = bbBR
     url = "https://sites.bipt.be/ajaxinterface.php"
     payload = f"action=getSites&latfrom={latfrom}&latto={latto}&longfrom={longfrom}&longto={longto}&LangSiteTable=sitesnl"
     headers = {
         'content-type': "application/x-www-form-urlencoded",
     }
-    print("Fetching data from BIPT...")
+    print(f"[BIPT] Fetching sites for {latfrom, latto, longfrom, longto}")
     response = requests.request("POST", url, data=payload, headers=headers)
     return response.text
 
-def get_bipt_sites_from_json (json):
+def load_bipt_sites_from_json (json):
     # returns a GeoDataFrame with all BIPT sites specified in the json
     df = pd.read_json(json)
     df = df.dropna(axis='columns', how='all') # clean up the data, remove all-empty columns
-    print(f"BIPT JSON contains {len(df.index)} sites")
+    total_sites = len(df)
 
     df = df[df["Status"] == "O"] # only take Operational sites (Status = O)
-    print(f"After removing non-operational sites, there are {len(df.index)} sites.")
+    operational_sites_number = len(df)
+    print(f"[BIPT] {total_sites} BIPT sites found, of which {operational_sites_number} operational.")
+
     df = df.drop(columns=["BIPTRef1", "BIPTRef2", "BIPTRef3", "Status", "Ref1", "Ref2", "Ref3", "NrOps", "SiteType"]) # clean up the dataframe, dumping unneeded info
     df["Proximus"] = np.where(df["Eigenaar1"].str.contains("Proximus") | df["Eigenaar2"].str.contains("Proximus") | df["Eigenaar3"].str.contains("Proximus"), True, False)
     df["Orange"] = np.where(df["Eigenaar1"].str.contains("Orange") | df["Eigenaar2"].str.contains("Orange") | df["Eigenaar3"].str.contains("Orange"), True, False)
     df["Telenet"] = np.where(df["Eigenaar1"].str.contains("Telenet") | df["Eigenaar2"].str.contains("Telenet") | df["Eigenaar3"].str.contains("Telenet"), True, False)
 
-
     # Now create GeoDataFrames from the above data, in Lambert 72
     sites = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.X, df.Y), crs="EPSG:31370")
+    return sites
+
+def get_wgs84_bbox_from_lambert_bbox(left, top, right, bottom):
+    inProj = Proj('epsg:31370')
+    outProj = Proj('epsg:4326')
+    latfrom,longfrom = transform(inProj,outProj, left, bottom)
+    latto, longto = transform(inProj,outProj, right, top)
+    return latfrom, latto, longfrom, longto
+
+def get_bipt_sites_in_lambert_bbox(left, top, right, bottom):
+    resp = get_bipt_sites_json(*get_wgs84_bbox_from_lambert_bbox(left, top, right, bottom))
+    # creating a geodataframe in Lambert 72
+    sites = load_bipt_sites_from_json(resp)
     return sites
 
 def get_features_for_sites(sites, features):
@@ -139,19 +150,8 @@ def get_sites_sectors_list(sites, attesten):
     return r
 
 if __name__ == "__main__":
-    # get BIPT sites between bounding box coordinates
-    # Square around Leuven: 50.85403591206532&latto=50.9028849568349&longfrom=4.656774657415301&longto=4.744493621038348
-    #r = getBIPTsites(1,2,3,4)
-
-
-    # creating a geodataframe in Lambert 72
-    sites = get_bipt_sites_from_json("data/bipt.json")
-
-    # extracting the sites per operator (some are co-loc sites so pxs + tnt + org > total sites in most cases)
-    pxs = sites[sites["Proximus"]==True] # all proximus sites
-    tnt = sites[sites["Telenet"]==True] # all telenet sites
-    org = sites[sites["Orange"]==True] # all orange sites
-    print(f"PROXIMUS: {len(pxs.index)}, TELENET: {len(tnt.index)}, ORANGE: {len(org.index)} (Possibly with co-location)")
+    
+    
     if(False): # nice for displaying the selected sites
         sites.to_file("sites_bipt.geojson", driver="GeoJSON")
         pxs.to_file("sites_pxs.geojson", driver='GeoJSON')
@@ -162,32 +162,6 @@ if __name__ == "__main__":
     #tnt_sites = get_features_for_sites(tnt, wfs_tnt)
     #download_attesten_for_features(tnt_sites, "data/attesten_tnt")
     #parse_attesten_for_features(tnt_sites)
-
-    print("PROXIMUS")
-    print("---------------------------------------------------------------")
-    wfs_pxs = gpd.read_file("data/wfs_pxs.geojson") # Extracted from QGIS
-    # TODO: filter wfs_pxs with bounding box under investigation (possible in geopandas!)
-    pxs_sites = get_features_for_sites(pxs, wfs_pxs)
-    download_attesten_for_features(pxs_sites, "test/attesten_pxs")
-    parsed_attesten = parse_attesten_for_features(pxs_sites)
-    sites_sector_list = get_sites_sectors_list(pxs_sites, parsed_attesten) # currently filters out non-L8 bands
-    with open('sites_with_sectors_pxs.json', 'w') as outfile:
-        json.dump(sites_sector_list, outfile, indent=4)
-    print("----------------------------------------------------------------")
-
-    print("TELENET")
-    print("---------------------------------------------------------------")
-    wfs_tnt = gpd.read_file("data/wfs_tnt.geojson") # Extracted from QGIS
-    # TODO: filter wfs_tnt with bounding box under investigation (possible in geopandas!)
-    tnt_sites = get_features_for_sites(tnt, wfs_tnt)
-    tnt_sites = download_attesten_for_features(tnt_sites, "test/attesten_tnt")
-    parsed_attesten = parse_attesten_for_features(tnt_sites)
-    sites_sector_list = get_sites_sectors_list(tnt_sites, parsed_attesten) # currently filters out non-L8 bands
-    with open('sites_with_sectors_tnt.json', 'w') as outfile:
-        json.dump(sites_sector_list, outfile, indent=4)
-
-    # TODO: GENERATE GEOJSON OF ACTUAL SITES (that are in the sites_sector_list)
-    # To make maps of the simulated sites
 
 
     #wfs_org = gpd.read_file("wfs_org.geojson") # Extracted from QGIS
