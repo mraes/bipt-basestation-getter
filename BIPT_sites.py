@@ -19,7 +19,9 @@ def get_bipt_sites_json(latfrom, latto, longfrom, longto):
         'content-type': "application/x-www-form-urlencoded",
     }
     print(f"[BIPT] Fetching sites for {latfrom, latto, longfrom, longto}")
-    response = requests.request("POST", url, data=payload, headers=headers)
+    response = requests.request("POST", url, data=payload, headers=headers, verify=False)
+    if(response.status_code == 500):
+        raise Exception("BIPT didn't like that...")
     return response.text
 
 def load_bipt_sites_from_json (json):
@@ -151,12 +153,21 @@ def get_sites_sectors_list(sites, attesten):
 
 if __name__ == "__main__":
     
-    
-    if(False): # nice for displaying the selected sites
-        sites.to_file("sites_bipt.geojson", driver="GeoJSON")
-        pxs.to_file("sites_pxs.geojson", driver='GeoJSON')
-        tnt.to_file("sites_tnt.geojson", driver='GeoJSON')
-        org.to_file("sites_org.geojson", driver='GeoJSON')
+    if(False):
+        data = get_bipt_sites_json(50.670354,51.508742,2.510376,6.201782) # bounding box vlaanderen
+        sites = load_bipt_sites_from_json(data)
+        with open("bipt_vlaanderen_all.json", 'w') as f:
+           f.write(data)
+    if(False):
+        sites = load_bipt_sites_from_json("data/bipt_vlaanderen_all.json")
+        pxs = sites[sites["Proximus"]==True] # all proximus sites
+        tnt = sites[sites["Telenet"]==True] # all telenet sites
+        org = sites[sites["Orange"]==True] # all orange sites
+        print(f"PROXIMUS: {len(pxs.index)}, TELENET: {len(tnt.index)}, ORANGE: {len(org.index)} (Possibly with co-location)")
+        sites.to_file("sites_vlaanderen.geojson", driver="GeoJSON")
+        pxs.to_file("sites_vlaanderen_pxs.geojson", driver="GeoJSON")
+        tnt.to_file("sites_vlaanderen_tnt.geojson", driver="GeoJSON")
+        org.to_file("sites_vlaanderen_org.geojson", driver="GeoJSON")
 
     #wfs_tnt = gpd.read_file("wfs_tnt.geojson") # Extracted from QGIS
     #tnt_sites = get_features_for_sites(tnt, wfs_tnt)

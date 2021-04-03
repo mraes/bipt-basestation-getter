@@ -2,6 +2,7 @@ import rasterio
 from BIPT_sites import get_bipt_sites_in_lambert_bbox, load_bipt_sites_from_json, get_features_for_sites, download_attesten_for_features, parse_attesten_for_features, get_sites_sectors_list
 import geopandas as gpd
 import json
+import pdb
 
 if __name__ == "__main__":
     dsm = rasterio.open('../test_leuven.tif')
@@ -39,6 +40,3 @@ if __name__ == "__main__":
     sites_sector_list = get_sites_sectors_list(tnt_sites, parsed_attesten) # currently filters out non-L8 bands
     with open('sites_with_sectors_tnt.json', 'w') as outfile:
         json.dump(sites_sector_list, outfile, indent=4)
-
-    # TODO: GENERATE GEOJSON OF ACTUAL SITES (that are in the sites_sector_list)
-    # To make maps of the simulated sites

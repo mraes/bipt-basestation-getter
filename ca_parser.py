@@ -2,11 +2,14 @@ import camelot
 import pandas as pd
 import sys
 import pdb
+import numpy as np
 
 columns = ['Antenna', 'Azimuth', 'Height', 'Width', 'Frequency', 'AGL', 'Power', 'ETilt', 'MTilt', 'HAperture', 'VAperture', 'Gain']
 
 def format_dataframe(df):
     if df.iloc[0,-1] == "Technologie": # First (most recent) type of attest
+        # print("Type 1")
+        # print(df[df.columns[2:9]])
         df.columns = df.iloc[0]
         df = df.drop(0)
         df = df[df.Technologie == "4G"]
@@ -18,6 +21,8 @@ def format_dataframe(df):
         df[number_columns] = df[number_columns].stack().str.replace(",", ".").unstack()
         df[number_columns] = df[number_columns].apply(pd.to_numeric)
     elif len(df.columns) == 13: # Second (slightly older) type of attest
+        # print("Type 2")
+        # print(df[df.columns[2:9]])
         df.columns = df.iloc[0]
         df = df.drop(0)
         df = df.drop(columns=["NR"])
@@ -33,15 +38,19 @@ def format_dataframe(df):
 
         #TODO: FILTER OUT NON-4G freqs
     elif len(df.columns) == 14: # Third (even older) type of attest
+        #print("Type 3")
+        #print(df[df.columns[4:9]])
         if df.iloc[0,0] == "Zendantennes": #double check
             df = df.drop([0,1])
             df = df.drop(columns=[0,8]) # drop the "Nr" column and the "Tilt" column, we get that from MTilt & Etilt
             df.columns = columns
             number_columns = ['Azimuth', 'Height', 'Width', 'Frequency', 'AGL', 'Power', 'MTilt', 'HAperture', 'VAperture', 'Gain']
             df[number_columns] = df[number_columns].apply(pd.to_numeric, errors='coerce')
+            df["Power"] = 30 + (10 * np.log10(df["Power"])) # indicated in W in this type, so needs to be converted to dBm
             # filter out 900 MHz (3G) & 2100 MHz (3G)
             df = df[abs(df.Frequency - 900) > 50]
             df = df[abs(df.Frequency - 2100) > 100]
+            #print(df[df.columns[4:9]])
         else:
             pdb.set_trace()
             raise Exception("Conformiteitsattest not supported.")
