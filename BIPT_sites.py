@@ -3,11 +3,10 @@ import pandas as pd
 import numpy as np
 import geopandas as gpd
 from ca_parser import parse_conformiteitsattest
-import pdb
 from tqdm.contrib.concurrent import process_map  # or thread_map
-from tqdm import tqdm
 from functools import partial
 from pyproj import Proj, transform
+from tqdm import tqdm
 
 logger = logging.getLogger(__name__)
 
@@ -100,11 +99,11 @@ def get_attest_for_site(site, directory: str):
 def _download_attest(site, directory):
     filename, fromcache = get_attest_for_site(site, directory)
     fromcache_str = "[CACHE]" if fromcache else ""
-    #tqdm.write(f"Download: {site.conformiteitsattest} -> {filename} {fromcache_str}")
+    tqdm.write(f"Download: {site.conformiteitsattest} -> {filename} {fromcache_str}")
     return filename
 
 def download_attesten_for_features(features, directory):
-    print(f"Downloading {len(features)} conformiteitsattesten to ./{directory} \n")
+    print(f"Downloading {len(features)} conformiteitsattesten to {directory} \n")
     list_of_files = process_map(partial(_download_attest, directory=directory), features, max_workers=os.cpu_count(), desc="Downloading")
     for index, f in enumerate(features):
         f["attest"] = list_of_files[index]
@@ -112,10 +111,10 @@ def download_attesten_for_features(features, directory):
 
 
 def _parse_attest(pdfpath):
-    #tqdm.write(f"Parsing {pdfpath}")
+    tqdm.write(f"Parsing {pdfpath}")
     jsonpath = f"{pdfpath}.json"
     if(os.path.exists(jsonpath)):
-            #tqdm.write(f"Was already parsed to {jsonpath}, loading from cache.")
+            tqdm.write(f"Was already parsed to {jsonpath}, loading from cache.")
             df = pd.read_json(jsonpath)
     else:
         df = parse_conformiteitsattest(pdfpath)
@@ -130,6 +129,7 @@ def parse_attesten_for_features(features):
         attest_list.append(f.attest)
     print(f"Parsing {len(attest_list)} conformiteitsattesten...")
     parsed_sites = process_map(_parse_attest, attest_list, max_workers=os.cpu_count(), desc="Parsing")
+    #parsed_sites = list(map(_parse_attest, attest_list))
     return parsed_sites
 
 def get_sites_sectors_list(sites, attesten):
