@@ -1,0 +1,2529 @@
+[
+    {
+        "bipt_id": 21478,
+        "location": {
+            "x": 153183.7016,
+            "y": 210058.132
+        },
+        "sectors": [
+            {
+                "Azimuth": 355,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.04,
+                "Power": 43.1,
+                "ETilt": "0 - -7",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 220,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.04,
+                "Power": 47.5,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 80,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.04,
+                "Power": 45.5,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 1019,
+        "location": {
+            "x": 153527.6376,
+            "y": 211622.3339
+        },
+        "sectors": [
+            {
+                "Azimuth": 30,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 42.5,
+                "Power": 43.0102999566,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 200,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 42.5,
+                "Power": 38.9762709129,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 320,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 42.5,
+                "Power": 43.0102999566,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 1081,
+        "location": {
+            "x": 154515.2656,
+            "y": 210985.3672
+        },
+        "sectors": [
+            {
+                "Azimuth": 10,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 31.79,
+                "Power": 44.5,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 130,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.74,
+                "Power": 44.9,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.74,
+                "Power": 46.2,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            }
+        ]
+    },
+    {
+        "bipt_id": 1185,
+        "location": {
+            "x": 154692.2703,
+            "y": 212530.9065
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 21.05,
+                "Power": 42.7,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 21.05,
+                "Power": 37.6,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 21.05,
+                "Power": 39.7,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            }
+        ]
+    },
+    {
+        "bipt_id": 1274,
+        "location": {
+            "x": 153249.3032,
+            "y": 210742.1713
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 34.34,
+                "Power": 46.0,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 37.26,
+                "Power": 43.0,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 34.34,
+                "Power": 43.0,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 1553,
+        "location": {
+            "x": 153831.7513,
+            "y": 212355.1693
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 20.05,
+                "Power": 44.0,
+                "ETilt": "0 - -1",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 97,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 21.6,
+                "Power": 44.0,
+                "ETilt": "0 - -4",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 21.6,
+                "Power": 47.0,
+                "ETilt": "0 - -3",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            }
+        ]
+    },
+    {
+        "bipt_id": 1702,
+        "location": {
+            "x": 152060.8467,
+            "y": 209812.7694
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 28.62,
+                "Power": 47.0,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 28.62,
+                "Power": 47.0,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 28.62,
+                "Power": 47.0,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            }
+        ]
+    },
+    {
+        "bipt_id": 1853,
+        "location": {
+            "x": 152458.2244,
+            "y": 213034.4028
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 29.3,
+                "Power": 46.0205999133,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 29.3,
+                "Power": 44.1995574849,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 29.3,
+                "Power": 44.5788189673,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            }
+        ]
+    },
+    {
+        "bipt_id": 1903,
+        "location": {
+            "x": 152026.9125,
+            "y": 211967.8932
+        },
+        "sectors": [
+            {
+                "Azimuth": 30,
+                "Height": 1.9,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 21.61,
+                "Power": 43.8,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 10.0,
+                "Gain": 15.3
+            },
+            {
+                "Azimuth": 140,
+                "Height": 1.9,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 21.61,
+                "Power": 46.2,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 10.0,
+                "Gain": 15.3
+            },
+            {
+                "Azimuth": 270,
+                "Height": 1.9,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 21.61,
+                "Power": 45.1,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 10.0,
+                "Gain": 15.3
+            }
+        ]
+    },
+    {
+        "bipt_id": 2689,
+        "location": {
+            "x": 152448.6203,
+            "y": 212086.6297
+        },
+        "sectors": [
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 40.1,
+                "Power": 47.74,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            },
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 36.84,
+                "Power": 47.74,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 38.34,
+                "Power": 46.0,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            }
+        ]
+    },
+    {
+        "bipt_id": 2710,
+        "location": {
+            "x": 154917.2169,
+            "y": 212091.8307
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 22.3,
+                "Power": 45.9988307207,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 25.5,
+                "Power": 46.9983772587,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 25.5,
+                "Power": 46.9983772587,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 3271,
+        "location": {
+            "x": 155401.3667,
+            "y": 210088.4042
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 28.6,
+                "Power": 45.9988307207,
+                "ETilt": -7,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 28.6,
+                "Power": 44.9968708262,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 28.6,
+                "Power": 46.9983772587,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 3644,
+        "location": {
+            "x": 153498.8259,
+            "y": 211136.0732
+        },
+        "sectors": [
+            {
+                "Azimuth": 300,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 38.84,
+                "Power": 41.9,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.7
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 38.84,
+                "Power": 42.9,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.7
+            },
+            {
+                "Azimuth": 210,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 38.84,
+                "Power": 42.9,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.7
+            }
+        ]
+    },
+    {
+        "bipt_id": 4008,
+        "location": {
+            "x": 153131.5628,
+            "y": 211657.8569
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 34.84,
+                "Power": 44.4,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 34.84,
+                "Power": 47.3,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 34.84,
+                "Power": 44.5,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 4009,
+        "location": {
+            "x": 151884.0,
+            "y": 211185.0
+        },
+        "sectors": [
+            {
+                "Azimuth": 50,
+                "Height": 2.7,
+                "Width": 0.28,
+                "Frequency": 816.0,
+                "AGL": 23.1,
+                "Power": 41.9865708695,
+                "ETilt": -2,
+                "MTilt": 2,
+                "HAperture": 69,
+                "VAperture": 8.0,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 140,
+                "Height": 2.7,
+                "Width": 0.28,
+                "Frequency": 816.0,
+                "AGL": 23.1,
+                "Power": 44.9968708262,
+                "ETilt": -2,
+                "MTilt": 0,
+                "HAperture": 69,
+                "VAperture": 8.0,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 230,
+                "Height": 2.7,
+                "Width": 0.28,
+                "Frequency": 816.0,
+                "AGL": 23.1,
+                "Power": 41.9865708695,
+                "ETilt": -2,
+                "MTilt": 2,
+                "HAperture": 69,
+                "VAperture": 8.0,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 320,
+                "Height": 2.7,
+                "Width": 0.28,
+                "Frequency": 816.0,
+                "AGL": 23.1,
+                "Power": 40.0,
+                "ETilt": -2,
+                "MTilt": 2,
+                "HAperture": 69,
+                "VAperture": 8.0,
+                "Gain": 16.8
+            }
+        ]
+    },
+    {
+        "bipt_id": 4010,
+        "location": {
+            "x": 152983.7092,
+            "y": 212477.1089
+        },
+        "sectors": [
+            {
+                "Azimuth": 250,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 22.34,
+                "Power": 45.5,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 130,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 24.34,
+                "Power": 44.3,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 15,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 22.34,
+                "Power": 42.9,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            }
+        ]
+    },
+    {
+        "bipt_id": 4728,
+        "location": {
+            "x": 153891.832,
+            "y": 209882.2813
+        },
+        "sectors": [
+            {
+                "Azimuth": 61,
+                "Height": 1.9,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.46,
+                "Power": 47.7,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 68.3,
+                "VAperture": 10.5,
+                "Gain": 14
+            },
+            {
+                "Azimuth": 151,
+                "Height": 1.9,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.46,
+                "Power": 47.7,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 68.3,
+                "VAperture": 10.5,
+                "Gain": 14
+            },
+            {
+                "Azimuth": 241,
+                "Height": 1.9,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.46,
+                "Power": 47.7,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 68.3,
+                "VAperture": 10.5,
+                "Gain": 14
+            },
+            {
+                "Azimuth": 331,
+                "Height": 1.9,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 29.46,
+                "Power": 47.7,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 68.3,
+                "VAperture": 10.5,
+                "Gain": 14
+            }
+        ]
+    },
+    {
+        "bipt_id": 4792,
+        "location": {
+            "x": 154300.0268,
+            "y": 211037.0838
+        },
+        "sectors": [
+            {
+                "Azimuth": 32.5,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 32.55,
+                "Power": 47.1,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 164.0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 31.1,
+                "Power": 45.0,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 268.0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 33.85,
+                "Power": 39.2,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 4887,
+        "location": {
+            "x": 153098.483,
+            "y": 211032.2337
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 22.2,
+                "Power": 43.0102999566,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 22.2,
+                "Power": 42.4054924828,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 252,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 22.2,
+                "Power": 41.4921911266,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 4888,
+        "location": {
+            "x": 152407.3344,
+            "y": 210700.2893
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 22.9,
+                "Power": 43.0102999566,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 22.9,
+                "Power": 43.0102999566,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 22.9,
+                "Power": 45.9988307207,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 4925,
+        "location": {
+            "x": 153730.7553,
+            "y": 210584.9293
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 23.3,
+                "Power": 41.6136800223,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 23.3,
+                "Power": 41.6136800223,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 21.3,
+                "Power": 42.9003461136,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 4940,
+        "location": {
+            "x": 153671.6932,
+            "y": 213213.4135
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 19.95,
+                "Power": 40.9,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 19.95,
+                "Power": 45.9,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 19.95,
+                "Power": 42.5,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.8
+            }
+        ]
+    },
+    {
+        "bipt_id": 5315,
+        "location": {
+            "x": 155172.1184,
+            "y": 211515.5048
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 27.41,
+                "Power": 47.8,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 27.41,
+                "Power": 48.0,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 27.41,
+                "Power": 48.0,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            }
+        ]
+    },
+    {
+        "bipt_id": 5651,
+        "location": {
+            "x": 153029.1189,
+            "y": 212042.7144
+        },
+        "sectors": [
+            {
+                "Azimuth": 145,
+                "Height": 0.30000000000000004,
+                "Width": 0.09,
+                "Frequency": 816.0,
+                "AGL": 5.15,
+                "Power": 36.3,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 115,
+                "VAperture": 70,
+                "Gain": 5
+            }
+        ]
+    },
+    {
+        "bipt_id": 5669,
+        "location": {
+            "x": 152444.225,
+            "y": 212547.0037
+        },
+        "sectors": [
+            {
+                "Azimuth": 55,
+                "Height": 1.3,
+                "Width": 0.26,
+                "Frequency": 816.0,
+                "AGL": 22.36,
+                "Power": 40.7,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 65.0,
+                "VAperture": 15.3,
+                "Gain": 14.4
+            },
+            {
+                "Azimuth": 145,
+                "Height": 2.0,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 20.0,
+                "Power": 37.5,
+                "ETilt": "0 - -4",
+                "MTilt": 0,
+                "HAperture": 63.0,
+                "VAperture": 9.5,
+                "Gain": 15.4
+            },
+            {
+                "Azimuth": 235,
+                "Height": 2.0,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 21.5,
+                "Power": 27.2,
+                "ETilt": "0 - -4",
+                "MTilt": 0,
+                "HAperture": 63.0,
+                "VAperture": 9.5,
+                "Gain": 15.4
+            },
+            {
+                "Azimuth": 325,
+                "Height": 2.0,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 21.0,
+                "Power": 38.1,
+                "ETilt": "0 - -4",
+                "MTilt": 0,
+                "HAperture": 63.0,
+                "VAperture": 9.5,
+                "Gain": 15.4
+            }
+        ]
+    },
+    {
+        "bipt_id": 5674,
+        "location": {
+            "x": 152553.2575,
+            "y": 211740.8521
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 1.9,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 36.76,
+                "Power": 47.5,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 68.3,
+                "VAperture": 10.5,
+                "Gain": 14.8
+            },
+            {
+                "Azimuth": 120,
+                "Height": 1.9,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 36.76,
+                "Power": 47.9,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 68.3,
+                "VAperture": 10.5,
+                "Gain": 14.8
+            },
+            {
+                "Azimuth": 240,
+                "Height": 1.9,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 36.76,
+                "Power": 47.9,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 68.3,
+                "VAperture": 10.5,
+                "Gain": 14.8
+            }
+        ]
+    },
+    {
+        "bipt_id": 5681,
+        "location": {
+            "x": 153040.5194,
+            "y": 213089.1824
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.28,
+                "Frequency": 816.0,
+                "AGL": 35.5,
+                "Power": 41.9865708695,
+                "ETilt": -7,
+                "MTilt": 0,
+                "HAperture": 69,
+                "VAperture": 8.0,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.28,
+                "Frequency": 816.0,
+                "AGL": 30.2,
+                "Power": 48.0002935924,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 69,
+                "VAperture": 8.0,
+                "Gain": 16.8
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.28,
+                "Frequency": 816.0,
+                "AGL": 30.1,
+                "Power": 48.0002935924,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 69,
+                "VAperture": 8.0,
+                "Gain": 16.8
+            }
+        ]
+    },
+    {
+        "bipt_id": 5682,
+        "location": {
+            "x": 154339.9835,
+            "y": 210184.278
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 17.28,
+                "Power": 40.0,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 17.28,
+                "Power": 48.0,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 17.28,
+                "Power": 48.0,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 5749,
+        "location": {
+            "x": 153052.7579,
+            "y": 210311.7875
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 34.0,
+                "Power": 41.0037054512,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 35.1,
+                "Power": 44.9968708262,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 32.0,
+                "Power": 41.0037054512,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 5825,
+        "location": {
+            "x": 152900.4598,
+            "y": 211874.6982
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 21.8,
+                "Power": 44.9968708262,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 23.7,
+                "Power": 43.8916608436,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 22.7,
+                "Power": 44.9968708262,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 5856,
+        "location": {
+            "x": 154492.1771,
+            "y": 213094.349
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 24.94,
+                "Power": 46.0,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 24.94,
+                "Power": 46.0,
+                "ETilt": "-2 - -8",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 24.94,
+                "Power": 45.5,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            }
+        ]
+    },
+    {
+        "bipt_id": 6040,
+        "location": {
+            "x": 155397.3867,
+            "y": 212396.9747
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 26.3,
+                "Power": 48.0002935924,
+                "ETilt": -9,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 26.3,
+                "Power": 48.0002935924,
+                "ETilt": -8,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 26.3,
+                "Power": 48.0002935924,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 72,
+                "VAperture": 7,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 6784,
+        "location": {
+            "x": 155296.8646,
+            "y": 211981.6979
+        },
+        "sectors": [
+            {
+                "Azimuth": 120,
+                "Height": 2,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 20.8,
+                "Power": 43.4,
+                "ETilt": "0 - -4",
+                "MTilt": 0,
+                "HAperture": 66,
+                "VAperture": 9.0,
+                "Gain": 15.5
+            },
+            {
+                "Azimuth": 0,
+                "Height": 2,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 20.8,
+                "Power": 42.9,
+                "ETilt": "0 - -4",
+                "MTilt": 0,
+                "HAperture": 66,
+                "VAperture": 9.0,
+                "Gain": 15.5
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 20.8,
+                "Power": 42.2,
+                "ETilt": "0 - -4",
+                "MTilt": 0,
+                "HAperture": 66,
+                "VAperture": 9.0,
+                "Gain": 15.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 6786,
+        "location": {
+            "x": 152098.9818,
+            "y": 211668.9297
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 22.04,
+                "Power": 43.1,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 22.04,
+                "Power": 44.0,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 811.0,
+                "AGL": 22.04,
+                "Power": 42.8,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 67.7,
+                "VAperture": 7.7,
+                "Gain": 16.0
+            }
+        ]
+    },
+    {
+        "bipt_id": 6790,
+        "location": {
+            "x": 154848.9913,
+            "y": 211229.676
+        },
+        "sectors": [
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 22.25,
+                "Power": 46.2,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 115,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 22.25,
+                "Power": 45.3,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 22.25,
+                "Power": 44.1,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 7379,
+        "location": {
+            "x": 153837.3231,
+            "y": 211398.6832
+        },
+        "sectors": [
+            {
+                "Azimuth": 10,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 30.0,
+                "Power": 40.0,
+                "ETilt": -2,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7.0,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 30.0,
+                "Power": 41.0037054512,
+                "ETilt": -2,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7.0,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 30.0,
+                "Power": 40.0,
+                "ETilt": -2,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7.0,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 7387,
+        "location": {
+            "x": 154749.3347,
+            "y": 210586.366
+        },
+        "sectors": [
+            {
+                "Azimuth": 30,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 29.6,
+                "Power": 48.0002935924,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 125,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 29.6,
+                "Power": 48.0002935924,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 29.6,
+                "Power": 48.0002935924,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 7389,
+        "location": {
+            "x": 152539.75,
+            "y": 210087.5052
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.44,
+                "Frequency": 816.0,
+                "AGL": 21.35,
+                "Power": 46.0,
+                "ETilt": "0 - -4",
+                "MTilt": 0,
+                "HAperture": 75,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.44,
+                "Frequency": 816.0,
+                "AGL": 21.35,
+                "Power": 42.5,
+                "ETilt": "0 - -5",
+                "MTilt": 0,
+                "HAperture": 75,
+                "VAperture": 7,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.44,
+                "Frequency": 816.0,
+                "AGL": 21.35,
+                "Power": 43.0,
+                "ETilt": "0",
+                "MTilt": 0,
+                "HAperture": 75,
+                "VAperture": 7,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 7397,
+        "location": {
+            "x": 154945.7714,
+            "y": 213123.5232
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.5,
+                "Width": 0.27,
+                "Frequency": 816.0,
+                "AGL": 19.7,
+                "Power": 48.0002935924,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 8.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.5,
+                "Width": 0.27,
+                "Frequency": 816.0,
+                "AGL": 19.7,
+                "Power": 48.0002935924,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 8.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.5,
+                "Width": 0.27,
+                "Frequency": 816.0,
+                "AGL": 19.7,
+                "Power": 46.9983772587,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 8.3,
+                "Gain": 16.4
+            }
+        ]
+    },
+    {
+        "bipt_id": 7524,
+        "location": {
+            "x": 153753.2083,
+            "y": 212737.4658
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 20.8,
+                "Power": 46.9983772587,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 122,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 20.8,
+                "Power": 45.9988307207,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 252,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 20.8,
+                "Power": 43.9967372148,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 7529,
+        "location": {
+            "x": 151843.3274,
+            "y": 210387.7487
+        },
+        "sectors": [
+            {
+                "Azimuth": 356,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 27.8,
+                "Power": 43.9967372148,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 123,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 27.8,
+                "Power": 48.0002935924,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 250,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 28.3,
+                "Power": 48.0002935924,
+                "ETilt": -3,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 7530,
+        "location": {
+            "x": 153589.8846,
+            "y": 210033.57
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 23,
+                "Power": 43.9967372148,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 130,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 23,
+                "Power": 48.0002935924,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 215,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 23,
+                "Power": 46.9983772587,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 7588,
+        "location": {
+            "x": 154300.9906,
+            "y": 212538.9856
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 25.4,
+                "Power": 48.0002935924,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 25.4,
+                "Power": 43.9967372148,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.7,
+                "Width": 0.25,
+                "Frequency": 816.0,
+                "AGL": 25.4,
+                "Power": 48.0002935924,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 7,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 7689,
+        "location": {
+            "x": 154390.0825,
+            "y": 211787.4759
+        },
+        "sectors": [
+            {
+                "Azimuth": 120,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 27.89,
+                "Power": 48.0,
+                "ETilt": "0 - -6",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 27.89,
+                "Power": 42.6,
+                "ETilt": "0 - -5",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 0,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 27.89,
+                "Power": 48.0,
+                "ETilt": "0 - -5",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 7795,
+        "location": {
+            "x": 153483.6036,
+            "y": 210898.8096
+        },
+        "sectors": [
+            {
+                "Azimuth": 32,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 30.34,
+                "Power": 45.6,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 72.0,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            },
+            {
+                "Azimuth": 164,
+                "Height": 1.9,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 30.66,
+                "Power": 47.1,
+                "ETilt": "-2 - -12",
+                "MTilt": 0,
+                "HAperture": 68.3,
+                "VAperture": 10.5,
+                "Gain": 14.0
+            },
+            {
+                "Azimuth": 268,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 30.34,
+                "Power": 46.3,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 72.0,
+                "VAperture": 7.5,
+                "Gain": 16.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 7853,
+        "location": {
+            "x": 152670.3929,
+            "y": 211490.0818
+        },
+        "sectors": [
+            {
+                "Azimuth": 120,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 26.39,
+                "Power": 45.5,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 240,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 26.39,
+                "Power": 46.6,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            },
+            {
+                "Azimuth": 0,
+                "Height": 2.8,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 26.39,
+                "Power": 45.5,
+                "ETilt": "0 - -8",
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 8004,
+        "location": {
+            "x": 152239.5649,
+            "y": 212855.7805
+        },
+        "sectors": [
+            {
+                "Azimuth": 20,
+                "Height": 2.7,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 42.15,
+                "Power": 46.0,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 67,
+                "VAperture": 7.5,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 120,
+                "Height": 2.7,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 42.15,
+                "Power": 45.5,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 67,
+                "VAperture": 7.5,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 210,
+                "Height": 2.7,
+                "Width": 0.31,
+                "Frequency": 816.0,
+                "AGL": 42.15,
+                "Power": 46.0,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 67,
+                "VAperture": 7.5,
+                "Gain": 16.4
+            }
+        ]
+    },
+    {
+        "bipt_id": 8144,
+        "location": {
+            "x": 154168.8483,
+            "y": 212865.5403
+        },
+        "sectors": [
+            {
+                "Azimuth": 100,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 23.3,
+                "Power": 41.9865708695,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 220,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 23.3,
+                "Power": 43.9967372148,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 330,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 23.3,
+                "Power": 43.0102999566,
+                "ETilt": -4,
+                "MTilt": 0,
+                "HAperture": 68,
+                "VAperture": 7.5,
+                "Gain": 16.4
+            }
+        ]
+    },
+    {
+        "bipt_id": 8168,
+        "location": {
+            "x": 154816.0313,
+            "y": 212311.2188
+        },
+        "sectors": [
+            {
+                "Azimuth": 10,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 16.94,
+                "Power": 43.3,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 250,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 16.94,
+                "Power": 45.8,
+                "ETilt": "-2 - -6",
+                "MTilt": 0,
+                "HAperture": 67.0,
+                "VAperture": 7.3,
+                "Gain": 16.4
+            },
+            {
+                "Azimuth": 100,
+                "Height": 2.7,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 16.94,
+                "Power": 39.0,
+                "ETilt": "-2",
+                "MTilt": 0,
+                "HAperture": 69.1,
+                "VAperture": 7.6,
+                "Gain": 16.2
+            }
+        ]
+    },
+    {
+        "bipt_id": 8211,
+        "location": {
+            "x": 154336.5824,
+            "y": 210785.9183
+        },
+        "sectors": [
+            {
+                "Azimuth": 30,
+                "Height": 2,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 25.1,
+                "Power": 48,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 63,
+                "VAperture": 9.5,
+                "Gain": 15.5
+            },
+            {
+                "Azimuth": 165,
+                "Height": 2,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 38.5,
+                "Power": 48,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 63,
+                "VAperture": 9.5,
+                "Gain": 15.5
+            },
+            {
+                "Azimuth": 300,
+                "Height": 2,
+                "Width": 0.43,
+                "Frequency": 816.0,
+                "AGL": 25.1,
+                "Power": 48,
+                "ETilt": "0 - -10",
+                "MTilt": 0,
+                "HAperture": 63,
+                "VAperture": 9.5,
+                "Gain": 15.5
+            }
+        ]
+    },
+    {
+        "bipt_id": 13214,
+        "location": {
+            "x": 152107.5126,
+            "y": 210820.8613
+        },
+        "sectors": [
+            {
+                "Azimuth": 30,
+                "Height": 2.5,
+                "Width": 0.35000000000000003,
+                "Frequency": 816.0,
+                "AGL": 29.2,
+                "Power": 47.5966784469,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8.6,
+                "Gain": 16
+            },
+            {
+                "Azimuth": 150,
+                "Height": 2.5,
+                "Width": 0.35000000000000003,
+                "Frequency": 816.0,
+                "AGL": 28.6,
+                "Power": 44.3933269383,
+                "ETilt": -6,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8.6,
+                "Gain": 16
+            },
+            {
+                "Azimuth": 270,
+                "Height": 2.5,
+                "Width": 0.35000000000000003,
+                "Frequency": 816.0,
+                "AGL": 28.6,
+                "Power": 36.9897000434,
+                "ETilt": -7,
+                "MTilt": 0,
+                "HAperture": 65,
+                "VAperture": 8.6,
+                "Gain": 16
+            }
+        ]
+    },
+    {
+        "bipt_id": 17596,
+        "location": {
+            "x": 152281.8878,
+            "y": 212361.0085
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 0.2,
+                "Width": 0.01,
+                "Frequency": 816.0,
+                "AGL": 6.6,
+                "Power": NaN,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 360,
+                "VAperture": 360,
+                "Gain": 2
+            }
+        ]
+    },
+    {
+        "bipt_id": 22202,
+        "location": {
+            "x": 152191.1719,
+            "y": 212239.8739
+        },
+        "sectors": [
+            {
+                "Azimuth": 360,
+                "Height": 1.9,
+                "Width": 0.03,
+                "Frequency": 816.0,
+                "AGL": 5.55,
+                "Power": 22,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 360,
+                "VAperture": 360,
+                "Gain": 2.0
+            }
+        ]
+    },
+    {
+        "bipt_id": 24520,
+        "location": {
+            "x": 152559.1094,
+            "y": 212239.3047
+        },
+        "sectors": [
+            {
+                "Azimuth": 0,
+                "Height": 0.5,
+                "Width": 0.07,
+                "Frequency": 816.0,
+                "AGL": 7.7,
+                "Power": 25.8,
+                "ETilt": 0,
+                "MTilt": 0,
+                "HAperture": 360,
+                "VAperture": 43,
+                "Gain": 3.9
+            }
+        ]
+    }
+]

@@ -86,5 +86,4 @@ if __name__ == "__main__":
         with open(filename, 'w') as outfile:
             json.dump(sites_sector_list, outfile, indent=4)
         print(f"--------Done! Output: {filename} ----------------------------")
-
     print(f"Done.")
